@@ -1,0 +1,340 @@
+/*
+ * Typography
+ ************
+ * We define font types, colors, sizes, text-alignment, etc.
+ */
+
+ @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+ @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+/* font-family: 'Cormorant', serif; */
+
+ @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+/* font-family: 'Pinyon Script', cursive; */
+
+	/* Setting up font families */
+
+body, h3		{ font-family: 'Raleway', sans-serif; }
+h1, h2, h4, h5, h6	{ font-family: 'Cormorant', serif; }
+blockquote, q		{ font-family: 'Pinyon Script', cursive; }
+
+
+	/* Beautiful selections */
+
+::-moz-selection	{ background: #888; color: #fff; text-shadow: none; }
+::selection		{ background: #888; color: #fff; text-shadow: none; }
+
+
+	/* Setting up font sizes, styles and weight */
+
+.clickable	{ cursor: pointer; }
+
+h1		{ font-size: 2.4em; }
+h2		{ font-size: 2.1em; }
+h3		{ font-size: 1.8em; }
+h4		{ font-size: 1.5em; }
+.content div	{ font-size: 1.06em; text-align: justify }
+blockquote, q	{ font-size: 1.06em; font-style: italic; }
+.page-changer	{ font-size: 1.5em; font-weight: 200; text-align: center; }
+.modalbox-btn	{ font-size: 1.1em; }
+.close-btn	{ font-size: 38px; font-weight: bold; }	
+.modalbox	{ font-size: 1.1em; }
+
+
+	/* Backgrounds and fonts colors */
+
+body	{
+	background-position-x: 50%;
+	background-position-y: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #ffffff;
+	color: #000000;
+}
+@media only screen and (max-width: 700px)	{
+	body	{
+		background-repeat: repeat;
+		background-attachment: initial;
+		background-size: initial;
+	}
+}
+
+.page-wrapper	{ background-color: rgba(255, 255, 255, 0.5); }
+@media only screen and (max-width: 700px)	{
+	.page-changer	{ background-color: rgba(0, 0, 0, 0.3); }
+}
+.page-changer:hover	{ background-color: rgba(0, 0, 0, 0.3); }
+.dot	{ background-color: #aaa; transition: background-color 0.6s ease; }
+.active, .dot:hover	{ background-color: #2b2927; }
+.modalbox-btn, .modalbox-wrapper	{ 
+	background-color: #2b2927; 
+	color: #aaaaaa
+}
+.modalbox-btn:hover	{ color: #ffffff; }
+.modalbox-btn p	{ text-align: center; }
+.modalbox	{
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #aaaaaa;
+}
+.close-btn:hover	{ color: #ffffff; }
+
+
+/*
+ * Paddings, margins & forms
+ ***************************
+ * 
+ * These are defined for inner containers so that the dimensions
+ *  of layout containers are not affected in any way.
+ */
+
+html, body	{ height: 100%; }
+body	{ margin: 0; padding: 0; }
+h2	{ margin: 10px 20px 10px 10px; padding: 10px 0 10px 0; }
+h3	{ margin: 5px 10px 5px 10px; padding: 5px 0 5px 0; }
+h4	{ margin: 3px 5px 3px 5px; padding: 2px 0 2px 0; }
+p	{ margin: 0; padding: 7px; }
+li	{ margin: 0; padding: 3px; }
+img	{ margin: 20px; margin-top: 0; border-radius: 10px; }
+
+	/* The divs inside the page wrapper have to be given some 
+	margins. When the screen width is low, page changers and 
+	modalbox buttons do not have paddings, they fit with the page
+	wrapper. */
+
+.page-wrapper		{ margin: 0; }
+.content	{ margin: 0 20px 10px 20px; }
+blockquote	{ margin: 0 30px 10px 30px; }
+
+
+	/* The page changers are circles */
+
+.navigation-bar	{ margin-top: 20px; }
+.page-changer	{
+	width: 30px;
+	height: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius; 30px;
+
+	padding: 20px;
+}
+
+.dot-bar	{ margin-bottom: 20px; margin-top: 20px; }
+.dot	{
+	width: 12px;
+	height: 12px;
+	margin: 0 10px;
+	border-radius: 50%;
+}
+
+	/* The modalboxes buttons are rectangles with a border-radius
+	on one corner depending on whether it is Bibliograhy or About.
+	*/
+
+#bibliography-btn	{ border-top-left-radius: 4px; }
+#about-btn		{ border-top-right-radius: 4px; }
+#bibliography-btn p	{ border-right: 1px solid #6d6962; }
+#about-btn p		{ border-left: 1px solid #6d6962; }
+
+
+	/* The modalboxes wrappers have a border radius as well as 
+	the images */
+
+.modalbox-wrapper	{ 
+	margin: auto; 
+	margin-bottom: 20px; 
+	margin-top: 3%;
+	border-radius: 10px;
+}
+.modalbox-wrapper h3	{ 
+	border-bottom: solid 2px #6d6962;
+	margin: 20px;
+	padding: 0;
+	padding-bottom: 10px;
+}
+.modalbox-wrapper p	{
+	margin: 30px;
+	margin-bottom: 15px;
+	margin-top: 0;
+}
+.modalbox-wrapper ul	{
+	margin: 20px;
+}
+
+.close-btn		{ padding-right: 20px; padding-top: 7px; }
+
+
+/*
+ * Layout
+ ********
+ *
+ * Three elements need to be responsive not the same way :
+ *  - The annexes buttons are separated from the page wrapper if
+ *    (WIDTH > 1080), or at the bottom of it.
+ *
+ *  - The page page wrapper and the navigation bar :
+ *   - if (WIDTH < 600), then the navigation bar is within the page
+ *      wrapper, on the top of the annexes;
+ *   - if (600 < WIDTH <= 870), then the prev and next buttons are
+ *      next to the page wrapper, on the left and right, but they form
+ *      a three columns page.
+ *   - if (WIDTH > 870), then the right column can extended.
+ */
+
+	/* Illustrations */
+
+.illustration-frame	{
+	position: relative;
+	height: 130px;
+	margin: 20px 0px 20px 0px;
+	overflow: hidden;
+}
+
+.illustration	{
+	margin: 0;
+	border-radius: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 20;
+}
+
+.illustration-border	{
+	position: absolute;
+	width: 100%;
+	height: 110px;
+	padding: 10px;
+	box-shadow: 0 10px 20px red inset;
+	z-index: 30;
+}
+
+
+	/* Modal Boxes */
+
+.close-btn	{ float: right; }
+#logo		{ float: right; }
+#author		{ float: left; }
+
+.modalbox	{
+	display: none;	/* Hidden by default */
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	z-index: 1;
+
+	width: 100%;
+	min-height: 100%;
+}
+.modalbox-wrapper	{ overflow: auto; }
+
+@media only screen and (min-width: 871px)	{
+	.modalbox-wrapper	{ width: 70%; }
+}
+@media only screen and (max-width: 870px)	{
+	.modalbox-wrapper	{ width: 90%; }
+}
+@media only screen and (max-width: 600px)	{
+	.modalbox-wrapper	{
+		position: absolute;
+		border-radius: 0;
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+}
+
+
+	/* Annexes */
+
+.modalbox-btn	{
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+@media only screen and (min-width: 1081px)	{
+	.annexes	{
+		position: fixed;
+		width: 33%;
+		bottom: 0;
+		right: 3%;
+	}
+}
+@media only screen and (max-width: 1080px)	{
+	.annexes	{
+		display: flex;
+		position: static;
+		width: 100%;
+	}
+}
+
+
+	/* Page wrapper and navigation bar */
+
+/* These properties are generally applied when the navbar is not
+within the page wrapper. */
+
+.page-changer	{
+	position: fixed;
+	top: 45%;
+}
+
+.dot-bar	{ text-align: center; }
+.dot	{ display: inline-block; }
+
+.page-wrapper	{
+	position: absolute;
+}
+
+@media only screen and (min-width: 871px)	{
+	.page-wrapper	{ left: 120px; width: 540px; }
+	#prev		{ left: 25px; }
+	#next		{ left: 685px; }
+}
+@media only screen and (max-width: 870px)	{
+	.page-wrapper	{ left: 14%; width: 62%; }
+	#prev		{ left: 3%; }
+	#next		{ left: 80%; }
+}
+@media only screen and (max-width: 700px)	{
+	.page-wrapper	{ left: 0; top: 0; width: 100%; }
+	.navigation-bar	{
+		display: flex;
+		justify-content: center;
+		position: static;
+		left: 0;
+	width: 100%;
+	}
+	.page-changer	{
+		position: static;
+		margin-bottom: 10px; 
+	}
+	#prev		{ margin-right: 15%; }
+	#next		{ margin-left: 15%; }
+}
+
+
+/* Display information */
+
+.slide	{ display: none; } /* Hide slides by default */
+
+.fade	{
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 0.5s;
+	animation-name: fade;
+	animation-duration: 0.5s;
+}
+
+@-webkit-keyframes fade	{
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+@keyframes fade	{
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
