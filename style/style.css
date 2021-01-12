@@ -40,7 +40,7 @@ h4		{ font-size: 1.5em; }
 .content div	{ font-size: 1.06em; text-align: justify }
 blockquote, q	{ font-size: 1.06em; font-style: italic; }
 .page-changer	{ font-size: 1.5em; font-weight: 200; text-align: center; }
-.modalbox-btn	{ font-size: 1.1em; }
+.utility-trigger	{ font-size: 1.1em; }
 .modalbox-close	{ font-size: 38px; font-weight: bold; }	
 .modalbox	{ font-size: 1.1em; }
 
@@ -71,20 +71,26 @@ body	{
 .page-changer:hover	{ background-color: rgba(0, 0, 0, 0.3); }
 .dot	{ background-color: #aaa; transition: background-color 0.6s ease; }
 .active, .dot:hover	{ background-color: #2b2927; }
-.modalbox-btn, .modalbox-wrapper	{ 
-	background-color: #2b2927; 
-	color: #aaaaaa
-}
-.work-wrapper	{
-	background-color: white;
-}
-.modalbox-btn:hover	{ color: #ffffff; }
-.modalbox-btn p	{ text-align: center; }
+
+.utility-trigger:hover	{ color: #ffffff; }
+.utility-trigger p	{ text-align: center; }
+.work-trigger	{ text-decoration: underline dotted; }
+
 .modalbox	{
 	background-color: rgba(0, 0, 0, 0.4);
 	color: #aaaaaa;
 }
+.utility-trigger, .utility-wrapper	{ 
+	background-color: #2b2927; 
+	color: #aaaaaa
+}
+.work-wrapper	{ 
+	background-color: #fafafa; 
+	color: #888888;
+}
+
 .utility-close:hover	{ color: #ffffff; }
+.work-close:hover	{ color: #888888; }
 
 
 /*
@@ -139,10 +145,10 @@ blockquote	{ margin: 0 30px 10px 30px; }
 	on one corner depending on whether it is Bibliograhy or About.
 	*/
 
-#bibliography-btn	{ border-top-left-radius: 4px; }
-#about-btn		{ border-top-right-radius: 4px; }
-#bibliography-btn p	{ border-right: 1px solid #6d6962; }
-#about-btn p		{ border-left: 1px solid #6d6962; }
+.annexes > :first-child	{ border-top-left-radius: 4px; }
+.annexes > :last-child	{ border-top-right-radius: 4px; }
+.annexes > :first-child p	{ border-right: 1px solid #6d6962; }
+.annexes > :last-child p	{ border-left: 1px solid #6d6962; }
 
 
 	/* The modalboxes wrappers have a border radius as well as 
@@ -199,8 +205,8 @@ blockquote	{ margin: 0 30px 10px 30px; }
 
 .illustration-frame	{
 	position: relative;
-	height: 130px;
-	margin: 20px 0px 20px 0px;
+	height: 170px;
+	margin: 65px 0px 20px 0px;
 	overflow: hidden;
 }
 
@@ -208,10 +214,12 @@ blockquote	{ margin: 0 30px 10px 30px; }
 	margin: 0;
 	border-radius: 0;
 	position: absolute;
-	right: 0;
 	top: 0;
 	z-index: 20;
 }
+
+.illustr-right	{ right: 0; }
+.illustr-left	{ left: 0; }
 
 .illustration-border	{
 	position: absolute;
@@ -229,9 +237,8 @@ blockquote	{ margin: 0 30px 10px 30px; }
 #logo		{ float: right; }
 #author		{ float: left; }
 
+.hide	{ display: none; }
 .modalbox	{
-	display: none;	/* Hidden by default */
-
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -244,10 +251,12 @@ blockquote	{ margin: 0 30px 10px 30px; }
 .modalbox-wrapper	{ overflow: auto; }
 
 @media only screen and (min-width: 871px)	{
-	.modalbox-wrapper	{ width: 70%; }
+	.utility-wrapper	{ width: 70%; }
+	.work-wrapper		{ width: 45%; }
 }
 @media only screen and (max-width: 870px)	{
-	.modalbox-wrapper	{ width: 90%; }
+	.utility-wrapper	{ width: 90%; }
+	.work-wrapper		{ width: 80%; }
 }
 @media only screen and (max-width: 600px)	{
 	.modalbox-wrapper	{
@@ -257,16 +266,19 @@ blockquote	{ margin: 0 30px 10px 30px; }
 		width: 100%;
 		min-height: 100%;
 	}
+	.utility-wrapper	{ width: 100%; }
 }
 
 .work-wrapper	{
-	width: 50%;
-	height: 90vh;
+	height: 100%;
+	margin: auto;
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 	/* Annexes */
 
-.modalbox-btn	{
+.utility-trigger	{
 	float: left;
 	width: 50%;
 	height: 100%;

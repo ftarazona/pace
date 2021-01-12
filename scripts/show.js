@@ -13,8 +13,6 @@ function setPageVisible(v)
 	var val = v ? "block" : "none";
 
 	page.style.display		= val;
-	trigger[0][0].style.display	= val;
-	trigger[1][0].style.display	= val;
 
 	if(v)
 	{
