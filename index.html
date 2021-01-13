@@ -15,31 +15,25 @@
 	<script type="text/javascript" src="scripts/elements.js"></script>
 	<script type="text/javascript" src="scripts/eventlistener.js"></script>
 	<script type="text/javascript" src="scripts/show.js"></script>
+	<script type="text/javascript" src="scripts/scroll.js"></script>
 	<title>Salut, voyageur égaré !</title>
 </head>
 
 <body>
 	<div class="page-wrapper" id="page-content">
-		<a class="clickable box work-trigger machine-trigger" id="machine-trigger">The Time Machine</a>
-		<a class="clickable box work-trigger voyageur-trigger" id="voyageur-trigger">Le Voyageur imprudent</a>
-		<a class="clickable box work-trigger future-trigger" id="future-trigger">Back to the Future</a>
-		<a class="clickable box work-trigger monkeys-trigger" id="monkeys-trigger">Twelve Monkeys</a>
-		<a class="clickable box work-trigger interstellar-trigger" id="interstellar-trigger">Interstellar</a>
-		<a class="clickable box work-trigger dark-trigger" id="dark-trigger">Dark</a>
-		<a class="clickable box work-trigger tenet-trigger" id="tenet-trigger">Tenet</a>
-		<div class="slide" include-html="resources/pace-1.html"></div>
-		<div class="slide" include-html="resources/pace-2.html"></div>
-		<div class="slide" include-html="resources/pace-3.html"></div>
-		<div class="slide" include-html="resources/pace-4.html"></div>
-		<div class="slide" include-html="resources/pace-5.html"></div>
-		<div class="slide" include-html="resources/pace-6.html"></div>
+		<div class="slide fade" include-html="resources/pace-1.html"></div>
+		<div class="slide fade" include-html="resources/pace-2.html"></div>
+		<div class="slide fade" include-html="resources/pace-3.html"></div>
+		<div class="slide fade" include-html="resources/pace-4.html"></div>
+		<div class="slide fade" include-html="resources/pace-5.html"></div>
+		<div class="slide fade" include-html="resources/pace-6.html"></div>
 
 		<nav class="navigation-bar">		
 			<div class="clickable page-changer" id="prev">&#10094;</div>
 			<div class="clickable page-changer" id="next">&#10095;</div>
 		</nav>
 
-		<nav class="dot-bar">
+		<nav class="dot-bar hide">
 			<span class="clickable dot"></span>
 			<span class="clickable dot"></span>
 			<span class="clickable dot"></span>

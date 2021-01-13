@@ -37,7 +37,7 @@ h4		{ font-size: 1.5em; }
 .title		{ text-decoration: underline; }
 .extract	{ font-style: italic; }
 .author		{ font-weight: 600; }
-.content div	{ font-size: 1.06em; text-align: justify }
+.content 	{ font-size: 1.06em; text-align: justify }
 blockquote, q	{ font-size: 1.06em; font-style: italic; }
 .page-changer	{ font-size: 1.5em; font-weight: 200; text-align: center; }
 .utility-trigger	{ font-size: 1.1em; }
@@ -64,7 +64,7 @@ body	{
 	}
 }
 
-.page-wrapper	{ background-color: rgba(255, 255, 255, 0.5); }
+.content	{ background-color: rgba(255, 255, 255, 0.5); }
 @media only screen and (max-width: 700px)	{
 	.page-changer	{ background-color: rgba(0, 0, 0, 0.3); }
 }
@@ -116,7 +116,7 @@ img	{ margin: 20px; margin-top: 0; border-radius: 10px; }
 	wrapper. */
 
 .page-wrapper		{ margin: 0; }
-.content	{ margin: 0 20px 10px 20px; }
+.content	{ margin: 0 35px 20px 35px; }
 blockquote	{ margin: 0 30px 10px 30px; }
 
 
@@ -270,7 +270,7 @@ blockquote	{ margin: 0 30px 10px 30px; }
 }
 
 .work-wrapper	{
-	height: 100%;
+	min-height: 100vh;
 	margin: auto;
 	margin-bottom: 0;
 	margin-top: 0;
@@ -321,7 +321,7 @@ within the page wrapper. */
 @media only screen and (min-width: 871px)	{
 	.page-wrapper	{ left: 120px; width: 540px; }
 	#prev		{ left: 25px; }
-	#next		{ left: 685px; }
+	#next		{ right: 25px; }
 }
 @media only screen and (max-width: 870px)	{
 	.page-wrapper	{ left: 14%; width: 62%; }
@@ -365,4 +365,41 @@ within the page wrapper. */
 @keyframes fade	{
 	from { opacity: 0 }
 	to { opacity: 1 }
+}
+
+/* Aliases */
+.cite-work	{
+	text-decoration: underline dotted;
+}
+.cite-work:hover	{
+	cursor: default;
+}
+
+/* First page */
+.page-wrapper	{ overflow: visible; }
+.content	{ padding: 30px; }
+#p1-1	{
+	position: relative;
+	width: 500px;
+	left: 0;
+	top: 0;
+}
+#p2-1	{
+	position: relative;
+	width: 550px;
+	left: 400px;
+	top: -40px;
+	opacity: 0;
+}
+#p3-1	{
+	position: relative;
+	width: 450px;
+	left: 40px;
+	top: -70px;
+}
+#p4-1	{
+	position: relative;
+	width: 450px;
+	left: 380px;
+	top: -110px;
 }

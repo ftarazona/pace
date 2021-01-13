@@ -1,3 +1,5 @@
+var lastScroll = 0;
+
 var page 	= null;
 var slides	= null;
 var prev 	= null;
@@ -29,13 +31,16 @@ function loadElements()
 			const [id, what] = tgt.id.split("-");
 			console.log(id);
 			if(what == "trigger")	{
-				window.scrollTo(0, 0);
+				lastScroll = window.scrollY;
 				document.getElementById(id+"-modal").classList.remove("hide");
 				setPageVisible(false);
+				window.scrollTo(0, 0);
 			}
 			else if(what == "close" || what == "modal")	{
+				setOpacities();
 				document.getElementById(id+"-modal").classList.add("hide");
 				setPageVisible(true);
+				window.scrollTo(0, lastScroll);
 			}
 		}
 	});
