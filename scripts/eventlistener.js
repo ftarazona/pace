@@ -4,9 +4,9 @@ window.onload = function()	{
 };
 
 window.onkeydown 	= function(gfg)	{
-	if(gfg.keyCode == 37 && slideIndex > 1)	{ 
-		showSlides(slideIndex -= 1); }
-	if(gfg.keyCode == 39 && slideIndex < 6) { 
-		showSlides(slideIndex += 1); }
+	if(gfg.keyCode == 37)	{ 
+		plusSlides(-1); }
+	if(gfg.keyCode == 39) { 
+		plusSlides(+1); }
 };
 

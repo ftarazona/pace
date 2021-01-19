@@ -33,7 +33,7 @@ blockquote, q		{ font-family: 'Pinyon Script', cursive; }
 h1		{ font-size: 2.4em; }
 h2		{ font-size: 2.1em; }
 h3		{ font-size: 1.8em; }
-h4		{ font-size: 1.5em; }
+h4		{ font-size: 1.8em; }
 .title		{ text-decoration: underline; }
 .extract	{ font-style: italic; }
 .author		{ font-weight: 600; }
@@ -402,4 +402,23 @@ within the page wrapper. */
 	width: 450px;
 	left: 380px;
 	top: -110px;
+}
+
+#p1-4	{
+	position: relative;
+	width: 500px;
+	left: 0;
+	top: 0;
+}
+#p2-4	{
+	position: relative;
+	width: 550px;
+	left: 400px;
+	top: -50px;
+}
+#p3-4	{
+	position: relative;
+	width: 500px;
+	left: 30px;
+	top: -70px;
 }

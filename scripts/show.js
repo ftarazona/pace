@@ -16,7 +16,7 @@ function setPageVisible(v)
 
 	if(v)
 	{
-		if(slideIndex > 1)	{ prev.style.display = val; }
+		if(slideIndex > 0)	{ prev.style.display = val; }
 		if(slideIndex < 6)	{ next.style.display = val; }
 	}
 	else
