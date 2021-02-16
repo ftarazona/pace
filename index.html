@@ -17,47 +17,25 @@
 	<script type="text/javascript" src="scripts/show.js"></script>
 	<script type="text/javascript" src="scripts/scroll.js"></script>
 	<title>Salut, voyageur égaré !</title>
+
+	<style>
+		body	{ 
+			background-image: url("img/bg-index.jpg"); 
+		}
+	</style>
 </head>
 
 <body>
-	<div class="page-wrapper" id="page-content">
-		<div class="slide fade" include-html="resources/pace-1.html"></div>
-		<div class="slide fade" include-html="resources/pace-2.html"></div>
-		<div class="slide fade" include-html="resources/pace-3.html"></div>
-		<div class="slide fade" include-html="resources/pace-4.html"></div>
-		<div class="slide fade" include-html="resources/pace-5.html"></div>
-		<div class="slide fade" include-html="resources/pace-6.html"></div>
+		<div class="index-wrapper">
+		<div class="fuckingAwesomeTitle">Salut à toi, voyageur égaré !</div>
 
-		<nav class="navigation-bar">		
-			<div class="clickable page-changer" id="prev">&#10094;</div>
-			<div class="clickable page-changer" id="next">&#10095;</div>
-		</nav>
+		<a href="page1.html"><div class="fuckingAwesomeSubtitle">1. Des machines temporelles</div></a>
+		<a href="page2.html"><div class="fuckingAwesomeSubtitle">2. Voyage et science, une relation réciproque</div></a>
+		<a href="page3.html"><div class="fuckingAwesomeSubtitle">3. Architecture temporelle</div></a>
+		<a href="page4.html"><div class="fuckingAwesomeSubtitle">4. Création et résolution de paradoxes</div></a>
+		<a href="page5.html"><div class="fuckingAwesomeSubtitle">5. Libre arbitre et déterminisme</div></a>
+		<a href="page6.html"><div class="fuckingAwesomeSubtitle">6. L'image du destin</div></a>
 
-		<nav class="dot-bar hide">
-			<span class="clickable dot"></span>
-			<span class="clickable dot"></span>
-			<span class="clickable dot"></span>
-			<span class="clickable dot"></span>
-			<span class="clickable dot"></span>
-			<span class="clickable dot"></span>
-		</nav>
-
-		<aside class="annexes">
-			<div class="clickable utility-trigger"><p class="box" id="bibliography-trigger">Bibliographie</p></div>
-			<div class="clickable utility-trigger"><p class="box" id="about-trigger">À propos</p></div>
-		</aside>
-	</div>
-	
-	<div include-html="resources/bibliography.html"></div>
-	<div include-html="resources/about.html"></div>
-	<div include-html="resources/machine.html"></div>
-	<div include-html="resources/voyageur.html"></div>
-	<div include-html="resources/future.html"></div>
-	<div include-html="resources/monkeys.html"></div>
-	<div include-html="resources/interstellar.html"></div>
-	<div include-html="resources/dark.html"></div>
-	<div include-html="resources/tenet.html"></div>
-	
-	<script>includeHTML();</script>
+		</div>
 </body>
 </html>

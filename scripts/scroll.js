@@ -1,24 +1,18 @@
-const lat = 120;
-const sht = 160;
-const positions = [
-	[[80, 480], [580, 1150], [1260, 2100], [2100, 3000]],
-	[],
-	[],
-[[80, 660], [790, 1570], [1690, 3000]],
-	[],
-	[]
-];
+const lat = 150;
+const sht = 180;
 
 window.onscroll = function()	{ setOpacities(); }
+window.onresize = function()	{ setOpacities(); }
 
-function setOpacities()	
-{
-	for(var i = 0; i < positions[slideIndex].length; i++)
+function setOpacities()	{
+	var pars = document.getElementsByClassName("content");
+	for(var i = 0; i < pars.length; i++)
 	{
-		var par = document.getElementById("p" + (i+1) + "-" + (slideIndex+1));
+		var par = pars[i];
+		var offsets = par.getBoundingClientRect();
 		var sc = window.scrollY;
-		var p1 = positions[slideIndex][i][0];
-		var p2 = positions[slideIndex][i][1];
+		var p1 = offsets.top + window.scrollY + 60;
+		var p2 = offsets.bottom + window.scrollY - 130;
 		var e1 = sc - (p1 - sht - lat);
 		var e2 = -sc + (p2 - sht + lat);
 		if(p1 - sht < sc && sc < p2 - sht)	{ par.style.opacity = 1; }

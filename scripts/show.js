@@ -61,5 +61,8 @@ function showSlides(n)
 	slides[slideIndex].style.display = "block";
 	dots[slideIndex].className += " active";
 	document.body.style.backgroundImage = "url(" + bg[slideIndex] + ")";
-	setOpacities();
+}
+
+function setBackground(i)	{
+	document.body.style.backgroundImage = "url(" + bg[i - 1] + ")";
 }

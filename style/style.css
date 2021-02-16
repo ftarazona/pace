@@ -13,7 +13,9 @@
  @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 /* font-family: 'Pinyon Script', cursive; */
 
+a	{ text-decoration: none; }
 	/* Setting up font families */
+.link	{ font-size: smaller; vertical-align: super; cursor: pointer; }
 
 body, h3		{ font-family: 'Raleway', sans-serif; }
 h1, h2, h4, h5, h6	{ font-family: 'Cormorant', serif; }
@@ -30,8 +32,8 @@ blockquote, q		{ font-family: 'Pinyon Script', cursive; }
 
 .clickable	{ cursor: pointer; }
 
-h1		{ font-size: 2.4em; }
-h2		{ font-size: 2.1em; }
+h1		{ font-size: 2.8em; }
+h2		{ font-size: 2.6em; }
 h3		{ font-size: 1.8em; }
 h4		{ font-size: 1.8em; }
 .title		{ text-decoration: underline; }
@@ -64,9 +66,8 @@ body	{
 	}
 }
 
+@media only screen and (min-width: 1000px)	{
 .content	{ background-color: rgba(255, 255, 255, 0.5); }
-@media only screen and (max-width: 700px)	{
-	.page-changer	{ background-color: rgba(0, 0, 0, 0.3); }
 }
 .page-changer:hover	{ background-color: rgba(0, 0, 0, 0.3); }
 .dot	{ background-color: #aaa; transition: background-color 0.6s ease; }
@@ -84,6 +85,7 @@ body	{
 	background-color: #2b2927; 
 	color: #aaaaaa
 }
+p#summary	{ color: #aaaaaa; }
 .work-wrapper	{ 
 	background-color: #fafafa; 
 	color: #888888;
@@ -91,7 +93,40 @@ body	{
 
 .utility-close:hover	{ color: #ffffff; }
 .work-close:hover	{ color: #888888; }
+a			{ color: black; }
 
+/*
+ * Summary
+ */
+
+.index-wrapper	{
+	min-height: 100vh;
+	width: 60%;
+	margin: auto;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.fuckingAwesomeTitle	{ 
+	color: black;
+	font-family: 'Cormorant', serif; 
+	font-size: 4em;
+	padding: 20px 0px 20px 0px;
+	width: 100%;
+	text-align: center;
+	font-weight: 1.3em;
+}
+
+.fuckingAwesomeSubtitle	{
+	color: black;
+	font-size: 2em;
+	padding: 40px 0px 0px 0px;
+	width: 100%;
+	text-align: center;
+	font-weight: 1.5em;
+}
+
+.page-wrapper
 
 /*
  * Paddings, margins & forms
@@ -250,13 +285,9 @@ blockquote	{ margin: 0 30px 10px 30px; }
 }
 .modalbox-wrapper	{ overflow: auto; }
 
-@media only screen and (min-width: 871px)	{
+@media only screen and (min-width: 701px)	{
 	.utility-wrapper	{ width: 70%; }
 	.work-wrapper		{ width: 45%; }
-}
-@media only screen and (max-width: 870px)	{
-	.utility-wrapper	{ width: 90%; }
-	.work-wrapper		{ width: 80%; }
 }
 @media only screen and (max-width: 600px)	{
 	.modalbox-wrapper	{
@@ -280,19 +311,27 @@ blockquote	{ margin: 0 30px 10px 30px; }
 
 .utility-trigger	{
 	float: left;
-	width: 50%;
+	width: 33%;
 	height: 100%;
 }
 
-@media only screen and (min-width: 1081px)	{
+@media only screen and (min-width: 1001px)	{
 	.annexes	{
 		position: fixed;
-		width: 33%;
+		width: 40%;
 		bottom: 0;
 		right: 3%;
 	}
 }
-@media only screen and (max-width: 1080px)	{
+@media only screen and (max-width: 1000px)	{
+	.annexes	{
+		position: fixed;
+		width: 55%;
+		bottom: 0;
+		right: 3%;
+	}
+}
+@media only screen and (max-width: 770px)	{
 	.annexes	{
 		display: flex;
 		position: static;
@@ -318,17 +357,12 @@ within the page wrapper. */
 	position: absolute;
 }
 
-@media only screen and (min-width: 871px)	{
+@media only screen and (min-width: 771px)	{
 	.page-wrapper	{ left: 120px; width: 540px; }
-	#prev		{ left: 25px; }
-	#next		{ right: 25px; }
+	#prev		{ left: 1%; }
+	#next		{ right: 1%; }
 }
-@media only screen and (max-width: 870px)	{
-	.page-wrapper	{ left: 14%; width: 62%; }
-	#prev		{ left: 3%; }
-	#next		{ left: 80%; }
-}
-@media only screen and (max-width: 700px)	{
+@media only screen and (max-width: 770px)	{
 	.page-wrapper	{ left: 0; top: 0; width: 100%; }
 	.navigation-bar	{
 		display: flex;
@@ -341,14 +375,14 @@ within the page wrapper. */
 		position: static;
 		margin-bottom: 10px; 
 	}
-	#prev		{ margin-right: 15%; }
-	#next		{ margin-left: 15%; }
+	#prev		{ margin-right: 10%; }
+	#next		{ margin-left: 10%; }
 }
 
 
 /* Display information */
 
-.slide	{ display: none; } /* Hide slides by default */
+/*.slide	{ display: none; } *//* Hide slides by default */
 
 .fade	{
 	-webkit-animation-name: fade;
@@ -377,48 +411,40 @@ within the page wrapper. */
 
 /* First page */
 .page-wrapper	{ overflow: visible; }
-.content	{ padding: 30px; }
-#p1-1	{
+
+@media only screen and (min-width: 1001px)	{
+.content	{ padding: 30px; width: 50vw;}
+#p1	{
 	position: relative;
-	width: 500px;
 	left: 0;
 	top: 0;
 }
-#p2-1	{
+#p2	{
 	position: relative;
-	width: 550px;
-	left: 400px;
+	left: 35%;
 	top: -40px;
 	opacity: 0;
 }
-#p3-1	{
+#p3	{
 	position: relative;
-	width: 450px;
-	left: 40px;
-	top: -70px;
+	left: 15%;
+	top: -80px;
 }
-#p4-1	{
+#p4	{
 	position: relative;
-	width: 450px;
-	left: 380px;
-	top: -110px;
+	left: 25%;
+	top: -120px;
+}
 }
 
-#p1-4	{
-	position: relative;
-	width: 500px;
-	left: 0;
-	top: 0;
+@media only screen and (max-width: 1000px)	{
+	.page-wrapper	{ background-color: rgba(255, 255, 255, 0.4); }
+	.content	{ background-color: none; }
 }
-#p2-4	{
-	position: relative;
-	width: 550px;
-	left: 400px;
-	top: -50px;
+
+.hvrprt:hover	{
+
 }
-#p3-4	{
-	position: relative;
-	width: 500px;
-	left: 30px;
-	top: -70px;
+.hvrbox	{
+	
 }

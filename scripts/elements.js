@@ -15,9 +15,7 @@ function loadElements()
 	page 	= document.getElementById("page-content");
 	slides 	= document.getElementsByClassName("slide");
 	prev	= document.getElementById("prev");
-	prev.onclick = function()	{ plusSlides(-1); window.scrollTo(0, 0); }
 	next	= document.getElementById("next");
-	next.onclick = function()	{ plusSlides(1); window.scrollTo(0, 0); }
 	dots	= document.getElementsByClassName("dot");
 	for(var i = 0; i < dots.length; i++)	{ linkDot(i); }
 
@@ -43,5 +41,35 @@ function loadElements()
 				window.scrollTo(0, lastScroll);
 			}
 		}
-	});
+	});	
+}
+
+function linkAllThisShit()	{
+
+	var links1 = document.getElementsByClassName("link1");
+	for(var i = 0; i < links1.length; i++)	{
+		links1[i].setAttribute("href", "www.jstor.org/stable/41704303");
+	}
+	var links2 = document.getElementsByClassName("link2");
+	for(var i = 0; i < links2.length; i++)	{
+		links2[i].setAttribute("href", "www.jstor.org/stable/10.5621/sciefictstud.43.3.0553");
+	}
+	var links3 = document.getElementsByClassName("link3");
+	for(var i = 0; i < links3.length; i++)	{
+		links3[i].setAttribute("href", "www.jstor.org/stable/228574");
+	}
+	var links4 = document.getElementsByClassName("link4");
+	for(var i = 0; i < links4.length; i++)	{
+		links4[i].setAttribute("href", "www.jstor.org/stable/24942627");
+	}
+	var links5 = document.getElementsByClassName("link5");
+	for(var i = 0; i < links5.length; i++)	{
+		links5[i].setAttribute("href", "www.jstor.org/stable/1261141");
+	}
+	var links6 = document.getElementsByClassName("link6");
+	console.log(links6.length);
+	for(var i = 0; i < links6.length; i++)	{
+		console.log("aa");
+		links6[i].setAttribute("href", "https://www.jstor.org/stable/24396072");
+	}
 }

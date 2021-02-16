@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Florian Tarazona">
+	<meta name="description" content="PACE 2020-2021">
+	<meta name="keywords" content="Telecom, PACE, voyage, temps, temporel, paradoxe, destin">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<link rel="stylesheet" href="style/style.css">
+	
+	<script type="text/javascript" src="scripts/includeHTML.js"></script>
+	<script type="text/javascript" src="scripts/elements.js"></script>
+	<script type="text/javascript" src="scripts/eventlistener.js"></script>
+	<script type="text/javascript" src="scripts/show.js"></script>
+	<script type="text/javascript" src="scripts/scroll.js"></script>
+	<title>Salut, voyageur égaré !</title>
+</head>
+
+<body>
+	<div class="page-wrapper" id="page-content">
+		<div class="slide fade" include-html="resources/pace-2.html"></div>
+
+		<nav class="navigation-bar">		
+			<a href="page1.html"><div class="clickable page-changer" id="prev">&#10094;</div></a>
+			<a href="page3.html"><div class="clickable page-changer" id="next">&#10095;</div></a>
+		</nav>
+
+		<nav class="dot-bar hide">
+			<a href="page1.html" class="clickable dot"></a>
+			<a href="page2.html" class="clickable dot"></a>
+			<a href="page3.html" class="clickable dot"></a>
+			<a href="page4.html" class="clickable dot"></a>
+			<a href="page5.html" class="clickable dot"></a>
+			<a href="page6.html" class="clickable dot"></a>
+		</nav>
+
+		<aside class="annexes">
+			<div class="clickable utility-trigger"><p class="box" id="bibliography-trigger">Bibliographie</p></div>
+			<div class="clickable utility-trigger"><p class="box" id="about-trigger">À propos</p></div>
+			<div class="clickable utility-trigger"><a href="index.html"><p id="summary">Sommaire</p></a></div>
+		</aside>
+	</div>
+	
+	<div include-html="resources/bibliography.html"></div>
+	<div include-html="resources/about.html"></div>
+	<div include-html="resources/machine.html"></div>
+	<div include-html="resources/voyageur.html"></div>
+	<div include-html="resources/future.html"></div>
+	<div include-html="resources/monkeys.html"></div>
+	<div include-html="resources/interstellar.html"></div>
+	<div include-html="resources/dark.html"></div>
+	<div include-html="resources/tenet.html"></div>
+	
+	<script>includeHTML();</script>
+	<script>setBackground(2);</script>
+</body>
+</html>
