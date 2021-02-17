@@ -28,7 +28,7 @@ function loadElements()
 			e.preventDefault();
 			const [id, what] = tgt.id.split("-");
 			console.log(id);
-			if(what == "trigger")	{
+			if(what == "trigger" || what == "video")	{
 				lastScroll = window.scrollY;
 				document.getElementById(id+"-modal").classList.remove("hide");
 				setPageVisible(false);
@@ -39,9 +39,6 @@ function loadElements()
 				document.getElementById(id+"-modal").classList.add("hide");
 				setPageVisible(true);
 				window.scrollTo(0, lastScroll);
-			}
-			else if(what == "video")	{
-				alert("video there");
 			}
 		}
 	});	
