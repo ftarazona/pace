@@ -1,4 +1,8 @@
-window.onload = function()	{	
+window.onload = function()	{
 	loadElements();
-	linkAllThisShit();
+	setOpacities();
 };
+
+window.onscroll = function()	{ setOpacities(); }
+window.onresize = function()	{ setOpacities(); }
+

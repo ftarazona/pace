@@ -40,6 +40,9 @@ function loadElements()
 				setPageVisible(true);
 				window.scrollTo(0, lastScroll);
 			}
+			else if(what == "video")	{
+				alert("video there");
+			}
 		}
 	});	
 }

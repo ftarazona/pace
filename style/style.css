@@ -16,6 +16,25 @@
 a	{ text-decoration: none; }
 	/* Setting up font families */
 .link	{ font-size: smaller; vertical-align: super; cursor: pointer; }
+.dd		{ position: relative; display: inline-block; }
+.dd-title	{ display: inline-block; }
+.dd-content	{ 
+	display: none; 
+	position: absolute;
+	top: 20px;
+	left: 30%;
+	width: 40vw;
+	padding: 5px;
+
+	background-color: white;
+	border-radius: 4px;
+	border: 1px solid #444444;
+	color: #333333;
+	font-weight: 1.2em;
+	text-align: center;
+	background-image: url("img/newbg1.jpg");
+}
+.dd:hover .dd-content { display: block; }
 
 body, h3		{ font-family: 'Raleway', sans-serif; }
 h1, h2, h4, h5, h6	{ font-family: 'Cormorant', serif; }
@@ -142,6 +161,7 @@ h2	{ margin: 10px 20px 10px 10px; padding: 10px 0 10px 0; }
 h3	{ margin: 5px 10px 5px 10px; padding: 5px 0 5px 0; }
 h4	{ margin: 3px 5px 3px 5px; padding: 2px 0 2px 0; }
 p	{ margin: 0; padding: 7px; }
+.paragraph	{ margin: 0; padding: 7px; }
 li	{ margin: 0; padding: 3px; }
 img	{ margin: 20px; margin-top: 0; border-radius: 10px; }
 
@@ -323,6 +343,7 @@ blockquote	{ margin: 0 30px 10px 30px; }
 		right: 3%;
 	}
 }
+/*
 @media only screen and (max-width: 1000px)	{
 	.annexes	{
 		position: fixed;
@@ -330,8 +351,8 @@ blockquote	{ margin: 0 30px 10px 30px; }
 		bottom: 0;
 		right: 3%;
 	}
-}
-@media only screen and (max-width: 770px)	{
+}*/
+@media only screen and (max-width: 1000px)	{
 	.annexes	{
 		display: flex;
 		position: static;
