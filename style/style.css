@@ -105,6 +105,7 @@ body	{
 	color: #aaaaaa
 }
 p#summary	{ color: #aaaaaa; }
+p#summary:hover	{ color: #ffffff; }
 .work-wrapper	{ 
 	background-color: #fafafa; 
 	color: #888888;

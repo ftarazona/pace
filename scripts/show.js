@@ -12,18 +12,12 @@ function setPageVisible(v)
 {
 	var val = v ? "block" : "none";
 
-	page.style.display		= val;
+	page.style.display	= val;
 
-	if(v)
-	{
-		if(slideIndex > 0)	{ prev.style.display = val; }
-		if(slideIndex < 6)	{ next.style.display = val; }
-	}
-	else
-	{
-		prev.style.display = val;
-		next.style.display = val;
-	}
+	prev.style.display 	= val;
+	next.style.display 	= val;
+
+	setOpacities();
 }
 
 function setBoxVisible(v, i)
