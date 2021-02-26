@@ -35,6 +35,10 @@ function loadElements()
 				setPageVisible(false);
 			}
 			else if(what == "close" || what == "modal")	{
+				var videos = document.getElementsByTagName("IFRAME");
+				for(var k = 0; k < videos.length; k++)	{
+					videos[k].src = videos[k].src;
+				}
 				document.getElementById(id+"-modal").classList.add("hide");
 				setPageVisible(true);
 				window.scrollTo(0, lastScroll);
