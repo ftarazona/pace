@@ -15,15 +15,15 @@
 
 a	{ text-decoration: none; }
 	/* Setting up font families */
-.link	{ font-size: smaller; vertical-align: super; cursor: pointer; }
+.elink	{ font-size: smaller; vertical-align: super; cursor: pointer; }
+.link	{ text-decoration: underline dotted; }
 .dd		{ position: relative; display: inline-block; }
-.dd-title	{ display: inline-block; }
 .dd-content	{ 
 	display: none; 
 	position: absolute;
 	top: 20px;
-	left: 30%;
-	width: 40vw;
+	left: -5vw;
+	width: 34vw;
 	padding: 5px;
 
 	background-color: white;
@@ -35,6 +35,7 @@ a	{ text-decoration: none; }
 	background-image: url("img/newbg1.jpg");
 }
 .dd:hover .dd-content { display: block; }
+.dd:hover		{ z-index: 100; }
 
 body, h3		{ font-family: 'Raleway', sans-serif; }
 h1, h2, h4, h5, h6	{ font-family: 'Cormorant', serif; }
@@ -58,7 +59,7 @@ h4		{ font-size: 1.8em; }
 .title		{ text-decoration: underline; }
 .extract	{ font-style: italic; }
 .author		{ font-weight: 600; }
-.content 	{ font-size: 1.06em; text-align: justify }
+.content 	{ font-size: 1.06em; text-align: left; }
 blockquote, q	{ font-size: 1.06em; font-style: italic; }
 .page-changer	{ font-size: 1.5em; font-weight: 200; text-align: center; }
 .utility-trigger	{ font-size: 1.1em; }
@@ -94,7 +95,7 @@ body	{
 
 .utility-trigger:hover	{ color: #ffffff; }
 .utility-trigger p	{ text-align: center; }
-.work-trigger	{ text-decoration: underline dotted; }
+.work-trigger	{ text-decoration: underline; cursor: pointer; }
 
 .modalbox	{
 	background-color: rgba(0, 0, 0, 0.4);
@@ -469,4 +470,14 @@ within the page wrapper. */
 }
 .hvrbox	{
 	
+}
+
+.video-wrapper	{
+	width: 420px;
+	margin: auto;
+	margin-top: 20vh;
+}
+
+iframe	{
+	border: none;
 }

@@ -14,8 +14,12 @@ function setPageVisible(v)
 
 	page.style.display	= val;
 
-	prev.style.display 	= val;
-	next.style.display 	= val;
+	if(prev != null)	{
+		prev.style.display 	= val;
+	}
+	if(next != null)	{
+		next.style.display 	= val;
+	}
 
 	setOpacities();
 }

@@ -31,14 +31,14 @@ function loadElements()
 			if(what == "trigger" || what == "video")	{
 				lastScroll = window.scrollY;
 				document.getElementById(id+"-modal").classList.remove("hide");
-				setPageVisible(false);
 				window.scrollTo(0, 0);
+				setPageVisible(false);
 			}
 			else if(what == "close" || what == "modal")	{
-				setOpacities();
 				document.getElementById(id+"-modal").classList.add("hide");
 				setPageVisible(true);
 				window.scrollTo(0, lastScroll);
+				setOpacities();
 			}
 		}
 	});	
